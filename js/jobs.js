@@ -13,12 +13,9 @@ var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
     dynamicNavbar: true
 });
-$(document).ready(function(){
-  $('.bxslider').bxSlider(
-  	{pager: false,
-  		controls: false,
-  		speed: 500}
-  	);
+var mySlider = myApp.slider('.slider-container', {
+    speed: 400,
+    spaceBetween: 100
 });
 // create a settings object
 var settings = {
@@ -35,27 +32,4 @@ var settings = {
   maxWidth: 400 // the maximum width of the suggest box, default: as wide as the input box
 };
 
-// apply the settings to an input that should get the unibox
-$("#searchBox").unibox(settings);
-// server side of unibox-------------------
-// {
-//   words: [
-//     {
-//       name: 'name', // optionally, the name of the detected word
-//       image: 'http://...', // the URL of the image
-//     },
-//   ],
-//   suggests: {
-//     'headline 1': [
-//       {
-//         name: 'name', // the name of the suggest that is shown to the user
-//         image: 'http://...', // optionally an image URL to show next to the suggest
-//         link: 'http://...', // optionally a URL that links to the suggested page
-//       }
-//     ],
-
-//   }
-
-// }
-// server side of unibox-------------------
 

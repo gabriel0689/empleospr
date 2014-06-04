@@ -343,7 +343,8 @@ font-size: 17px;
   width: 80%;
 }
 #searchForm{
-  height:200px;
+  margin-top:10px;
+  height:100px;
 }
 .bxslider li{
   text-align: center;
